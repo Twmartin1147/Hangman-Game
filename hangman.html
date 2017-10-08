@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>	
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<title>Hangman</title>
+</head>
+<body>
+	<h1>Hangman<h1>
+	<div class="container">
+	  <div class="row">
+	    <div class="col-md-6 column1">
+	    	<img src="...">
+	    </div>
+	    <div class="col-md-6 column2">
+	    	<h3>Press any key to get started<h3>
+				<br>
+	    	<h3>Wins<h3>
+	    	<h3 class="win"><h3>
+	    		<br>
+	    	<h3>Current Word<h3>
+	    	<h3 class="current-word"><h3>	
+	    		<br>
+	    	<h3>Number of guesses remaining<h3>
+	    	<h3 class="current-guess"><h3>
+	    		<br>
+	    	<h3>Letters already guessed<h3>
+	    	<h3 class="guessed"><h3>	
+	    	
+	    </div>
+	  </div>
+	</div>
+	<script type="text/javascript">
+		
+		$(document).on("keypress", function(playGame){
+			console.log()
+		});
+		
+		function choose() {
+		var words = ['accept', 'ingenious', 'bye'];
+		var chosen = words[Math.floor(Math.random()*words.length)];
+		return chosen
+		}
+
+
+		function askForGuess(choose) {
+			var hangmanDisplay = []
+			var guessedLetters = []
+			var letter = onkeypress.key()
+			for (var i = 0, len = choose.length; i < 0; i++) {
+				$("hangmanDisplay").append("_")
+			}
+			while (guessedLetters < 7) {
+				var guess = prompt("Guess a letter")
+				var correctGuess = false
+				for (var i = 0, len = choose.length; i < 0; i++) {
+					if (guess === choose[i]) {
+						hangmanDisplay === guess
+						correctGuess === true
+						} 
+					}
+					if (correctGuess === false) {
+						$(guessedLetters).append(guess)
+						$("#guessed").text(guess)
+
+					}
+				var guessesLeft = 7 - guessedLetters.length
+				display
+				}
+			}
+			
+
+		function playGame(choose,askForGuess) {
+			var choice = choose
+			askForGuess(choice)
+
+		}
+
+		function apply() {
+			$("#guessed").text("guessedLetters")
+			$("#current-word").text("hangmanDisplay")
+			$("#current-guess").text("guessesLeft")
+		}
+
+	</script>
+</body>
+</html>
